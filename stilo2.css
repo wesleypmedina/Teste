@@ -1,0 +1,39 @@
+header {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  background-color: blue;
+  margin: auto; }
+
+nav ul li {
+  border: 1px solid black;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  padding: 5px;
+  margin: 8px;
+  width: 10%;
+  box-shadow: 0 0 0 -2px, 0 0 0 1px #cdcdcd; }
+  nav ul li:hover {
+    background-color: #00C0E0;
+    box-shadow: 0 0 0 3px, 0 0 0 4px #cdcdcd;
+    animation-duration: shadow .12s;
+    -webkit-animation-duration: shadow; }
+  nav ul li a {
+    font-family: Arial;
+    color: blue; }
+    nav ul li a:hover {
+      color: white; }
+
+body {
+  background-color: #fff;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  color: black; }
+  body li {
+    background-color: black; }
+
+/*# sourceMappingURL=stilo2.css.map */

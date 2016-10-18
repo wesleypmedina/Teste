@@ -1,0 +1,60 @@
+$fundo:#cdcdcd;
+$fonte:Arial;
+$fonte-size:15px;
+$bg:#fff;
+
+header{
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  background-color: blue;
+  margin: auto;
+}
+nav {
+  ul{
+    li{
+      border: 1px solid black;
+      float: left;
+      text-align: center;
+      text-decoration: none;
+      list-style: none;
+      padding: 5px;
+      margin: 8px;
+      width: 10%;
+      box-shadow: 0 0 0 -2px, 0 0 0 1px $fundo;
+      &:hover {
+        background-color: #00C0E0;
+        box-shadow: 0 0 0 3px , 0 0 0 4px $fundo;
+        animation-duration: shadow .12s;
+        -webkit-animation-duration:shadow;
+      }
+      a{
+       font-family: $fonte;
+        color: blue;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+body {
+  background-color:$bg;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+
+    @if lightness($bg)<50 {
+      li {
+        background-color: #00D000;
+      }
+    }
+    @else {
+      li{
+        background-color: black;
+      }
+    color: black;
+    }
+}

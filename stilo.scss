@@ -1,0 +1,62 @@
+//modelo botao gelatinoso
+
+//variavel-----------------------------------------------------------------------------------------------
+$color-fundo:#d2d2d2;
+$color-btn:#fe4365;
+$color-btn-active:#4ecdc4;
+$margin-btn:8em;
+$font-type: Arial black;
+
+//criando os mixin (DESNECESSARIO)----------------------------------------------------------------------------------------
+
+@mixin tempo($tempo){
+  -webkit-transition-duration: $tempo;
+  -moz-transition-duration: $tempo;
+  -o-transition-duration: $tempo;
+  transition-duration: $tempo;
+}
+
+@mixin animacao($anima){
+  -webkit-animation: $anima;
+  -moz-animation: $anima;
+  -o-animation: $anima;
+  animation: $anima;
+}
+
+@mixin duracao($durar){
+  -webkit-transition-duration: $durar;
+  -moz-transition-duration: $durar;
+  -o-transition-duration: $durar;
+  transition-duration: $durar;
+}
+
+//usando agora a body(corpo do site)-----------------------------------------------------------
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  background-color: $color-fundo;
+
+}
+
+//TRABALHANDO COM O BOTAO---------------------------------------------------------------------------
+
+a.btn {              // ou seja, na minha body eu tenho um link com a class btn( .btn= seguinifca o nome dado a sua classe)
+  display: inline-block;
+  margin: $margin-btn;
+  padding: .6em;
+  font-family: $font-type;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: $color-btn;
+  box-shadow: 0 0 0 -2px $color-fundo,0 0 0 -1px $color-btn;
+  -webkit-transition: box-shadow .21222s;
+  transition: box-shadow .3s;
+      &:hover , &:focus {
+        box-shadow: 0 0 0 6px $color-fundo,0 0 0 9px $color-btn;
+        @include tempo(cubic-bezier(.6,4,.3,.8));
+      }
+}
+
+//KEYFRAMES ------------------------------------------------------------------------------------------------------------
+
