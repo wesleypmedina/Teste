@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quadro de futebol</title>
+</head>
+<body>
+	<script type="text/javascript">
+			
+	var time = [1,2,3,4];
+
+	for(var i = 0; i<time.length;i++){
+
+		time[i] = window.prompt("Nome do " + (parseInt(i) + 1) +" Time");
+	}
+
+		for(i=0;i<6;i++){
+			for(j=i+1;j<time.length;j++){
+
+				document.write(time[i] + " x " + time[j] + "<br>");
+			}
+		}
+
+	
+
+	</script>
+</body>
+</html>

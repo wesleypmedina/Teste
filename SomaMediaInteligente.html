@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Media de alunos Milton leme</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var cont,cont2;
+
+		var quest = window.prompt("Quantos alunos estao na sala?");
+		cont = true;
+		
+		var melhorNota = 0;
+		while(cont == true){
+			var name = window.prompt("nome do aluno");
+			var nota = window.prompt("Nota do aluno");
+			if(nota > melhorNota){
+
+				melhorNota = nota;
+				var melhorAluno = name;
+			}
+
+			cont = window.prompt("qrer continuar");
+			if( cont == "sim"){
+				cont = true;
+			}
+			else {
+
+				cont = false;
+			}
+		}
+
+
+	
+
+		document.write("Melhor Aluno eh:" + melhorAluno + " com a nota de " + melhorNota);
+
+
+
+
+
+	</script>
+</body>
+</html>

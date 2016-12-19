@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GabaritoProva</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var nota = [[1,2,3,4],[1,2,3,4],[1,2,3,4],[1,2,3,4],[1,2,3,4]];
+
+		var aluno = [1,2,3,4];
+		var soma = 0;
+		var gabarito = ["A","B","C","D","E"];
+		var quest = ["A","B","C","D","E"];
+
+		for(var i=0;i<gabarito.length;i++){
+
+			gabarito[i] = window.prompt("Gabarito da Questao " + gabarito[i]);
+		}	
+
+		for(i=0;i<gabarito.length;i++){
+			aluno[i] = window.prompt("Aluno");
+
+				for(var j =0;j<gabarito.length;j++){
+
+					nota[i][j] = window.prompt("Questao (" + quest[j] + ")");
+				}
+		}
+
+		for(i=0;i<gabarito.length;i++){
+
+			for(j=0;j<gabarito.length;j++){
+
+				if(nota[i][j] == gabarito[j]){
+
+					soma = soma + 2; 
+				}
+			}
+
+			document.write("Aluno(a) "+aluno[i]+" Tirou uma nota de " + soma +" pontos!<br>");
+
+			soma = 0;
+		}
+	
+	</script>
+</body>
+</html>

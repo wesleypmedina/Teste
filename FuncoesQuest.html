@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quest de funcoes</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	var soma = 0;
+	var div = 0;
+	var nulo = 0;
+	var par = 0;
+	var quest = true;
+		while(quest == true){
+				var num = window.prompt("digite um numero");
+				var num2 = window.prompt("ate quando?");
+		for(num;num <= num2;num++){
+
+			soma = soma + parseInt(num);
+			if(num % 5 == 0){
+				div += 1;
+					if((num == 0) && (0%5 == 0)){
+						div -= 1;
+					}
+			}
+
+			if(num == 0){
+				nulo += 1;
+			}
+
+			if(num %2==0){
+				par = par + parseInt(num);
+			}
+		}
+
+		var media = soma / num2;
+
+		quest = window.prompt("Deseja continuar?");
+		if( quest == "sim"){
+			quest = true;
+		}
+		else{
+			quest = false;
+		}
+
+	}
+
+	document.write("Soma dos valores (" + soma+")<br>");
+	document.write("A media dos valores (" + Math.floor(media)+")<br>");
+	document.write("Numeros divisiveis por 5 (" + div +")<br>");
+	document.write("Quantos sao nulos (" + nulo +")<br>");
+	document.write("Soma dos pares ("+par+").");
+
+
+	</script>
+</body>
+</html>

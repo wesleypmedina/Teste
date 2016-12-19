@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Equasao do 2 grau</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var A = window.prompt("Valor de (A)");
+		var B = window.prompt("Valor de (B)");
+		var C = window.prompt("Valor de (C)");
+
+
+		function delta(a,b,c){
+			var mude = false;
+			var soma = (b * b) -4 * (a*c);
+
+			var result = Math.sqrt(soma);
+		
+				if(( result >= 0)&&(result <= 0)){
+
+					mude = true;
+					C = result;
+				}
+
+				else if( result == NaN){
+
+					mude == false;
+					
+				}
+
+				return mude;
+		}
+
+		alert(C);
+		
+		
+
+
+		function x1(a,b,c){
+
+				var soma = (parseInt(-b) + parseInt(c)) / 2*a;
+
+				return soma;
+		}
+
+		
+
+		function x2(a,b,c){
+
+				var soma = (parseInt(-b) - parseInt(c)) / 2*a;
+
+				return soma;
+		}
+		
+
+		if(delta(A,B,C) == true ){
+
+			document.write("Valor de x1 " + x1(A,B,C)+"<br>");
+			document.write("Valor de x2 " + x2(A,B,C)+"<br>");
+		}
+
+		else if (delta(A,B,C) == false){
+
+			document.write("Nao existe equação nesses numeros");
+		}
+
+	</script>
+</body>
+</html>

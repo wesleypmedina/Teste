@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculo juros simples</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var j,c,i,n;
+		var valor = window.prompt("Valor para emprestimo");
+		j = 10;
+		c = 2;
+		i = 4;
+		n = window.prompt("Quantos periodos?");
+
+		function jurosSimples(){
+
+			var soma = ((valor * 10)/100) * c * ((valor * i)/100) * n;
+
+			return soma; 
+		}
+
+		document.write(j+"<br>");
+		document.write(jurosSimples());
+	</script>
+</body>
+</html>

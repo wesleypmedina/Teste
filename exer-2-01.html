@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Se o numero é par ou impar</title>	
+</head>
+<body>
+	<script type="text/javascript">
+		
+	function par(a){
+			var mude = false;
+
+			if(a % 2 == 0){
+				mude = true;
+			}
+
+			return mude;
+	}
+
+	function inpar(a){
+			mude = false;
+
+			if(a % 2 != 0 ){
+
+				mude = true;
+			}
+
+			return mude;
+	}
+			var number = window.prompt("Digite um numero");
+
+		if(par(number) == true){
+			document.write("O numero "+number+" é PAR!");
+		}
+
+		else if(inpar(number)== true){
+			document.write("O numero " + number+ " é INPAR!");
+		}
+
+	</script>
+</body>
+</html>

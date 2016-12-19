@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jogo da Velha</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+			var tabela = [[1,2,3],[4,5,6],[7,8,9]];
+			var po,r,i,j,simb;
+
+
+			simb = "X";
+			document.write("-----<br>");
+			
+
+
+			
+
+			function mostrarVelha(){
+
+				for(i=0;i<3;i++){
+					for(j=0;j<3;j++){
+
+						document.write(tabela[i][j]);
+					}
+
+					document.write("<br>");
+				}
+			}
+
+
+			function jogar(a,b) {
+				var mudou = false;
+				var par1 = a;
+				var par2 = b;
+
+
+				for(i=0;i<3;i++){
+					for(j=0;j<3;j++){
+
+						if(tabela[i][j] == par2){
+
+							tabela[i][j] = par1;
+							mudou = true;
+						}
+					}
+				}	
+
+				return mudou;
+			}
+	
+
+			function mudarPlayer(){
+
+				if(simb == "X"){
+
+					simb = "0"
+				}
+
+				else{
+
+					simb = "X";
+				}
+			}
+
+			function resultado(){
+
+				var terminou = false;
+
+				for(i=0;i<3;i++){
+					for(j=0;j<3;j++){
+
+						if((tabela[i][0] == tabela[i][1])&&(tabela[i][1] == tabela[i][2])){
+
+							terminou = true;
+						}
+					}
+				}
+
+
+				for(i=0;i<3;i++){
+					if((tabela[0][i] == tabela[1][i])&&(tabela[1][i] ==tabela[2][i])){
+
+						terminou = true;
+					}
+				}
+
+				if((tabela[0][0] == tabela[1][1])&&(tabela[1][1]==tabela[2][2])){
+					terminou = true;
+				}
+
+				if((tabela[0][2] == tabela[1][1])&&(tabela[1][1]==tabela[2][0])){
+					terminou = true;
+				}
+
+				var cont = 0;
+
+				for(i=0;i<3;i++){
+					for(j=0;j<3;j++){
+
+						if((tabela[i][j] != "X")&&(tabela[i][j] != "0")){
+
+							cont = cont + 1;
+						}
+					}
+				}
+
+				if(cont == 0){
+					terminou = true;
+				}
+
+					return terminou;
+			}
+
+			while(resultado() != false){
+
+					while(r == true){
+
+						po = window.prompt("Qual posisao deseja jogar "+ simb);
+
+						r = jogar(simb,po);
+
+						if(r == false){
+
+							alert("Jogada Invalida!");
+						}
+					}
+
+				mostrarVelha();
+				mudarPlayer();
+
+				if(resultado == true){
+					document.write("Jogo Finalizado");
+					resultado == true;
+				}
+			}
+
+
+	</script>
+</body>
+</html>

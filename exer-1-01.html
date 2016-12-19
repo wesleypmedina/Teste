@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funsao para cada operação</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	function adicao(a,b){
+		var result = parseInt(a)+parseInt(b);
+
+		return result;
+	}
+
+	function multiplicacao(a,b){
+		var result = a * b;
+
+		return result;
+	}
+
+	function subtracao(a,b){
+		var result = a - b;
+
+		return result;
+	}
+
+	function divisao(a,b){
+		var result = a / b;
+
+		return result;
+	}
+
+	var numero1 = window.prompt("Digite um numero");
+	var numero2 = window.prompt("Digite outro numero");
+
+
+	document.write("A soma dos numeros " + adicao(numero1,numero2)+"<br>");
+	document.write("A multiplicasao dos numeros "+ multiplicacao(numero1,numero2)+"<br>");
+	document.write("A subtrasao do numero "+subtracao(numero1,numero2)+"<br>");
+	document.write("A divisao do numero "+divisao(numero1,numero2));
+
+	</script>
+</body>
+</html>

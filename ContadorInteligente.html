@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Contador inteligente</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num = window.prompt("Qual numero deseja contar");
+		var cont = window.prompt("Ate quantos");
+
+			if(num < cont){
+
+				for(num;num <= cont;num++){
+					document.write(num+"<br>");
+				}
+			}
+
+			else if( num > cont){
+
+				for(num;num >= cont;num=num-1){
+					document.write(num+"<br>");
+				}
+
+			}
+
+			else{
+				document.write("Numeros de contagem igual ao valor resebido nao pode ser contados!");
+			}
+		
+	</script>
+</body>
+</html>

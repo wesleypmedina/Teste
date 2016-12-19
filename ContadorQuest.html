@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contador de numeros </title>
+</head>
+<body>
+	<script type="text/javascript">
+	var cont = 0;	
+	var num = true;
+	while(num == true){
+	
+	var escolha = window.prompt("Digite um numero de 1-(0..10) 2-(10..0) 3-(sair)");
+
+	switch(escolha){
+		case '1' :
+
+		for(var i=0;i<=10;i++){
+			document.write(" "+i+"<br>");
+		}
+		num = window.prompt("Quer continuar?");
+	if(num == "sim"){
+		num = true;
+		cont = cont + 1;
+		document.write("("+cont +") repetisao <br><br>");
+		
+	}
+
+	else{
+		num = false;
+		cont += 1;
+		document.write("("+cont +") repetisao <br><br>");
+	}
+		break;
+
+		case '2' :
+
+		for(var i=10;i>=0;i--){
+			document.write(" "+i+"<br>");
+		}
+num = window.prompt("Quer continuar?");
+	if(num == "sim"){
+		num = true;
+		document.write("<br><br>");
+		cont = cont + 1;
+		document.write("("+cont +") repetisao <br><br>");
+	}
+
+	else{
+		num = false;
+		cont += 1;
+		document.write("("+cont +") repetisao <br><br>");
+	}
+		break;
+
+		case '3' :
+
+		num = false;
+
+		break;
+
+		default:
+			alert("Apenas (1) (2) (3)");
+
+	}
+
+	
+
+}
+
+	</script>
+</body>
+</html>

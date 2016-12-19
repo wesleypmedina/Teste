@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fiboratti</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var vetor = [1,2,3,4];
+		for (var i = 0; i<vetor.length;i++){
+			vetor[i] = window.prompt("valor :"+ (parseInt(i)+parseInt(1)));
+		}
+
+			for(i=0;i<4;i++){
+				for(var j = i+1; j<vetor.length;j++){
+					if(vetor[i]>vetor[j]){
+						var aux = vetor[i];
+						vetor[i] = vetor[j];
+						vetor[j] = aux;
+
+					}
+				}
+
+			}
+
+
+		for( i = 0; i<vetor.length; i++){
+
+			document.write(vetor[i]+"<br>");
+		}
+
+	</script>
+</body>
+</html>

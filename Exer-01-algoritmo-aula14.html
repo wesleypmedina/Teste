@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercicio 14 (CURSO EM VIDEO)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var Multi = [[1,2,3,4],[1,2,3,4],[1,2,3,4],[1,2,3,4]];
+		var quest;
+		var cont = 0;
+		var repetir = 1;
+
+
+		for(var i = 0;i<4;i++){
+			for(var j = 0;j<4;j++){
+				Multi[i][j] = Math.floor(Math.random()*10);
+
+				/*if(Multi[i][j] == Multi[cont][cont]){
+
+					Multi[i][j] = 1;
+					cont += 1;
+				}
+				else{
+					Multi[i][j] = 0;
+				} */
+
+				document.write(Multi[i][j]);
+			}
+			document.write("<br>");
+		}
+			document.write("<br><br>")
+		quest = window.prompt("(1)-Centro  (2)-Superior  (3)-Inferior  (4)-Sair");
+
+		switch(quest){
+
+			case '1':
+
+			for(i=0;i<4;i++){
+				if(i>=1){
+					document.write("..");
+
+				}
+				if(i>=2){
+					document.write("..");
+				}
+				if(i>=3){
+					document.write("..");
+				}
+
+				for(j=i;j< i+1;j++){
+					document.write(Multi[i][j]+"   ");
+					
+				}
+				document.write( "<br>");
+			}
+
+			break;
+
+			case '2':
+
+			for(i=0;i<3;i++){
+					document.write("..");
+					if(i>=1){
+					document.write("..");
+
+				}
+
+				if(i>=2){
+					document.write("..");
+				}
+
+				for(j=i+1;j< 4;j++){
+					document.write(Multi[i][j]);
+					
+				}
+				document.write( "<br>");
+			}
+
+			break;
+
+			case '3':
+
+			for(i=1;i<4;i++){
+				
+				for(j=0;j< i;j++){
+					document.write(Multi[i][j]);
+					
+				}
+				document.write( "<br>");
+			}
+
+			break;
+
+			case '4':
+
+			document.write("");
+
+			break;
+
+			default:
+			document.write("opção invalida");
+		}
+
+	</script>
+</body>
+</html>

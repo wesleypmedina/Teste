@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>O custo de um carro</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	function valor(a){
+
+		var custo = (a * 28)/100;
+		var custo2 = (a * 45)/100;
+
+		var result = parseInt(a) + parseInt(custo) + parseInt(custo2);
+
+
+		return result;
+	}
+
+	var quest = window.prompt("Valor de fabrica");
+	document.write("O valor do carro junto com os inpostos é de " + valor(quest));
+	</script>
+</body>
+</html>

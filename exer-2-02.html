@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Numero positivo ou negativo</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	var number = window.prompt("Digite um numero");
+
+	function positivo(a){
+		var mude = false;
+			if (a >= 0 ){
+
+				mude = true;
+
+			}
+
+			else {
+					mude = false;
+			}
+				return mude;
+	}
+
+	function negativo (a){
+		var mude = false;
+			if(a < 0 ){
+
+				mude = true;
+			}
+
+			else{
+				mude = false;
+			}
+
+			return mude;
+	}
+
+	if(positivo(number) == true){
+
+		document.write("POSITIVO");
+	}
+
+	else if (negativo(number) == true){
+
+		document.write("NEGATIVO");
+	}
+
+	</script>
+</body>
+</html>
