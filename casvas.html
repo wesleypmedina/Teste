@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas</title>
+</head>
+<body>
+<div>
+	<h1>Ola</h1>
+</div>	
+<canvas width="600" height="600"></canvas>
+		<script type="text/javascript">
+			
+			var canvas = document.querySelector("canvas");
+			var ctx = canvas.getContext("2d");
+
+			//criando uma arco em canvas (ARC)
+
+			//novo path
+			ctx.beginPath();
+
+			/*desenhar arco
+			parametros
+			1 = x,
+			2 = y,
+			3 = raio,
+			4 = angulo inicial
+			5 = angulo final,
+			6 = sentido horario(true) ou anti-horario(false) */
+			ctx.arc(200,200,100,0,180*Math.PI/180,false);
+
+			//preenchimento
+			ctx.fillStyle = "yellow";
+			ctx.fill();
+
+			//contorno
+			ctx.strokeStyle = "red";
+			ctx.stroke();
+		
+
+		</script>
+</body>
+</html>

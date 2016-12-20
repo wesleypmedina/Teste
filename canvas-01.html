@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+</head>
+<body>
+
+	<canvas id="tela" height="600" width="600"></canvas>
+
+	<script type="text/javascript">
+var c = document.querySelector("#tela");
+var ctx = c.getContext("2d");
+
+var imagem = new Image();
+imagem.src = "https://i.ytimg.com/vi/4ujFOBvjAvM/mqdefault.jpg";
+ctx.drawImage(imagem,0,0,c.width,c.height);
+
+imagem.onload = function(){
+	ctx.drawImage(imagem,0,0,c.width,c.height);
+	
+}
+
+ctx.textAlign = "center";
+ctx.font = "14pt arial";
+
+function rota(){
+var cont = 40;
+	var repetir = 0;
+	ctx.fillStyle = "#c0c0c0";
+
+ctx.fillText("Wesley Patrick",550,300);
+ctx.rotate(Math.PI/cont);
+	
+if(cont > repetir){
+
+	cont = cont - 1;
+	
+}
+ctx.clearRect(1000,1000,1000,1000);
+setTimeout(rota,500);
+}
+
+
+
+rota();
+
+ctx.strokeStyle = "black";
+ctx.lineWidth = 3;
+ctx.strokeText("Wesley Patrick",300,300);
+	</script>
+</body>
+</html>
