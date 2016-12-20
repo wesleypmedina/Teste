@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Numeros primos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	var number = window.prompt("Digite um numero");
+
+
+		function numerosPrimos(a){
+
+			
+			var retorno = false;
+			if(a % 2 == 0){
+
+				retorno = true;
+			}
+			else {
+				retorno = false;
+			}
+
+			return retorno;
+		}
+
+		alert(numerosPrimos());
+		numerosPrimos(number);
+		if(numerosPrimos() == true){
+
+			document.write("Numero "+number +" é primo");
+		}
+
+		else{
+			document.write("Numero " + number + " Nao é primo");
+		}
+
+
+	</script>
+</body>
+</html>
